@@ -3,9 +3,103 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Survey Form</title>
+    <title>Music Camp Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-      <h1>Hello world!</h1>
+    <main>
+      <!-- Title-->
+      <h1 id="title" class="text-align-center">Music Camp Survey Form</h1>
+
+      <!-- Description -->
+      <p id="description" class="text-align-center">Please tell us a little more about yourself</p>
+
+      <!-- Form -->
+      <form id="survey-form">
+
+        <!-- Name -->
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Please enter your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Please enter your email" required>
+        </div>
+
+        <!-- Age (optional) -->
+        <div class="form-group">
+          <label id="number-label" for="number">Age</label>
+          <input type="number" id="number" name="age" class="form-control" placeholder="Age" min="11" max="100">
+        </div>
+
+        <!-- Instrument -->
+        <div class="form-group">
+          <p class="question">What instrument do you play?</p>
+          <select id="dropdown" name="instrument" class="form-control" required>
+            <option disabled selected value="">Select your instrument</option>
+            <option value="violin">Violin</option>
+            <option value="viola">Viola</option>
+            <option value="cello">Cello</option>
+            <option value="bass">Bass</option>
+            <option value="harp">Harp</option>
+            <option value="piano">Piano</option>
+            <option value="flute">Flute</option>
+            <option value="oboe">Oboe</option>
+            <option value="clarinet">Clarinet</option>
+            <option value="bassoon">Bassoon</option>
+            <option value="horn">Horn</option>
+            <option value="trumpet">Trumpet</option>
+            <option value="trombone">Trombone</option>
+            <option value="baritone">Baritone</option>
+            <option value="tuba">Tuba</option>
+            <option value="percussion">Percussion</option>
+          </select>
+        </div>
+
+        <hr>
+
+        <!-- Degree -->
+        <div class="form-group">
+          <p class="question">What is the highest degree that you have earned?</p>
+          <label><input type="radio" name="degree" value="none" class="radio-input" checked>None</label>
+          <label><input type="radio" name="degree" value="highSchool" class="radio-input">High School</label>
+          <label><input type="radio" name="degree" value="bachelors" class="radio-input">Bachelor's</label>
+          <label><input type="radio" name="degree" value="masters" class="radio-input">Master's</label>
+          <label><input type="radio" name="degree" value="certificate" class="radio-input">Artist Diploma/Performer's Certificate</label>
+          <label><input type="radio" name="degree" value="doctorate" class="radio-input">Doctorate</label>
+        </div>
+
+        <hr>
+
+        <!-- Interested in (select all that apply) -->
+        <div class="form-group">
+          <p class="question">What are you interested in? (Check all that apply)</p>
+          <label><input type="checkbox" name="interests" value="band" class="checkbox-input">Band</label>
+          <label><input type="checkbox" name="interests" value="orchestra" class="checkbox-input">Orchestra</label>
+          <label><input type="checkbox" name="interests" value="lessons" class="checkbox-input">Lessons</label>
+          <label><input type="checkbox" name="interests" value="classes" class="checkbox-input">Master classes</label>
+          <label><input type="checkbox" name="interests" value="conducting" class="checkbox-input">Conducting</label>
+          <label><input type="checkbox" name="interests" value="composition" class="checkbox-input">Composition</label>
+          <label><input type="checkbox" name="interests" value="theory" class="checkbox-input">Music Theory</label>
+        </div>
+
+        <hr>
+
+        <!-- Additional comments -->
+        <div class="form-group">
+          <p class="question">Any additional questions or comments?</p>
+          <textarea id="comments" class="textarea-input" name="comments" placeholder="Enter your questions or comments here..."></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">Submit</button>
+        </div>
+
+      </form>
+    </main>
   </body>
 </html>

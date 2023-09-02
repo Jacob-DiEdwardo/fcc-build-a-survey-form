@@ -1,0 +1,98 @@
+:root {
+    --color-background: #4b4b63;
+    --color-secondary: #212133;
+    --color-submit: #7373fa;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tahoma', sans-serif;
+    background-color: var(--color-background);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: white;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 767px;
+}
+
+form {
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin: 0 auto 1.25rem 0;
+}
+
+input, button, select, textarea {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.question {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.radio-input, .checkbox-input {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 2.25rem;
+    padding: 0.25rem 0.5rem;
+    color: var(--color-secondary);
+    border-radius: 0.25rem;
+}
+
+p#description {
+    margin-bottom: 30px;
+}
+
+.textarea-input {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    padding: 0.5rem;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--color-submit);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    main {
+        max-width: unset;
+    }
+}
